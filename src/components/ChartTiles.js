@@ -24,10 +24,10 @@ export default class ChartTiles extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            weather: {main:0},
-            forecast: {'hi':' forecast'},
-            loading: true,
-            env:[{modules:[{dashboard_data:{Temperature:0}},{dashboard_data:{Temperature:0}},{dashboard_data:{Temperature:0}},{dashboard_data:{Temperature:0}}]}]
+            weather: this.props.weather,
+            forecast: this.props.forecast,
+            loading: this.props.loading,
+            env: this.props.env
         }
         this.fetchWeather = this.fetchWeather.bind(this);
         this.fetchNetatmo = this.fetchNetatmo.bind(this);
@@ -44,7 +44,10 @@ export default class ChartTiles extends React.Component {
     fetchNetatmo(){
         netatmo.environmental().then(function(res) {
             this.setState(function(){
-                return{env: res}
+                return{
+                    env: res,
+                    loading: false
+                }
             });
         }.bind(this));
     }
@@ -54,6 +57,7 @@ export default class ChartTiles extends React.Component {
                 return{weather: res}
             });
         }.bind(this));
+        /*
         weather.forecast(city).then(function(res) {
             this.setState(function(){
                 return{
@@ -62,6 +66,7 @@ export default class ChartTiles extends React.Component {
                 }
             });
         }.bind(this));
+        */
         console.log(this.state.loading);
     }
 
@@ -228,3 +233,10 @@ export default class ChartTiles extends React.Component {
     </Tiles>
 )}
 }
+
+ChartTiles.defaultProps = {
+    weather: {main:0},
+    forecast: null,
+    loading: true,
+    env: [{modules:[{dashboard_data:{Temperature:0}},{dashboard_data:{Temperature:0}},{dashboard_data:{Temperature:0}},{dashboard_data:{Temperature:0}}]}]
+  }
