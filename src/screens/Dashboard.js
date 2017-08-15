@@ -8,7 +8,7 @@ import {
 
 import Side from '../components/Side';
 import Nav from '../components/Nav';
-import Foot from '../components/Foot';
+//import Foot from '../components/Foot';
 import ChartTiles from '../components/ChartTiles';
 
 export default () => (
