@@ -1,0 +1,66 @@
+// (C) Copyright 2014-2016 Hewlett Packard Enterprise Development LP
+
+$brand-color: #865CD6;
+$brand-neutral-colors: (#0A64A0, #5A3C59, #501EB4, #49516F); //pink #DC2878, blue #0A64A0, Notman plum #5A3C59
+$brand-accent-colors: (#DC2878, #FF7D28); // electric light blue #00CCEB
+$brand-link-color: #865CD6;
+$brand-status-colors: (
+  critical: #FF324D,
+  error: #FF324D,
+  warning: #FFD602,
+  ok: #8CC800,
+  unknown: #a8a8a8,
+  disabled: #a8a8a8
+) !default;
+$brand-grey-colors: (#000001, #333333, #3B3B3B, #434343, #666666); //#3B3B3B
+
+$button-secondary-color: nth($brand-neutral-colors, 2);
+
+$brand-font-family: 'Open Sans', Arial, sans-serif;
+$brand-large-number-font-family: 'Open Sans', Arial, sans-serif;
+$code-font-family: Consolas, Menlo, 'DejaVu Sans Mono', 'Liberation Mono', monospace;
+$text-strong-font-weight: 600;
+
+$fonts-path: "https://fonts.gstatic.com/s/opensans/v13";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Condensed');
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local('Open Sans Light'),
+    local('OpenSans-Light'),
+    url("#{$fonts-path}/DXI1ORHCpsQm3Vp6mXoaTRampu5_7CjHW5spxoeN3Vs.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Open Sans'),
+    local('OpenSans-Regular'),
+    url("#{$fonts-path}/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local('Open Sans SemiBold'),
+    local('OpenSans-SemiBold'),
+    url("#{$fonts-path}/MTP_ySUJH_bn48VBG8sNShampu5_7CjHW5spxoeN3Vs.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('Open Sans Bold'),
+    local('OpenSans-Bold'),
+    url("#{$fonts-path}/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2") format('woff2');
+}
