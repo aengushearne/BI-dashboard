@@ -49,14 +49,18 @@ export default class ChartTiles extends React.Component {
                     loading: false
                 }
             });
-        }.bind(this));
+        }.bind(this), (err) => {
+            console.log('An error occurred (but not in setState!)', err);
+          });
     }
     fetchWeather(city){
         weather.weather(city).then(function(res) {
             this.setState(function(){
                 return{weather: res}
             });
-        }.bind(this));
+        }.bind(this), (err) => {
+            console.log('An error occurred (but not in setState!)', err);
+          });
         /*
         weather.forecast(city).then(function(res) {
             this.setState(function(){
