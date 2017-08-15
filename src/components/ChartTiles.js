@@ -99,7 +99,7 @@ export default class ChartTiles extends React.Component {
            <HotSpots count={12}
              max={100}
              activeIndex={11}
-             onActive={null} />
+             onActive={console.log('onActive')} />
          </Layers>
          <Axis count={2}
            labels={[{"index": 0, "label": "2016"}, {"index": 1, "label": "2017"}]} />
@@ -150,7 +150,7 @@ export default class ChartTiles extends React.Component {
       size='small' />}
       value={Math.round(this.state.weather.main.temp)}
       colorIndex='graph-2'
-      onActive={null} />
+      onActive={console.log('onActive')} />
       <Box direction='row'
       justify='center'
       align='center'
@@ -236,7 +236,7 @@ export default class ChartTiles extends React.Component {
 
 ChartTiles.defaultProps = {
     weather: {main:0},
-    forecast: null,
+    forecast: {main:0},
     loading: true,
     env: [{modules:[{dashboard_data:{Temperature:0}},{dashboard_data:{Temperature:0}},{dashboard_data:{Temperature:0}},{dashboard_data:{Temperature:0}}]}]
   }
