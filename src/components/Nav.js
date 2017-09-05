@@ -17,7 +17,7 @@ import {
       float={false}
       pad='small'>
       <Title>
-        MirEvo BI
+        BI Dashboard
       </Title>
       <Box flex={true}
         justify='end'

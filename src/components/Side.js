@@ -18,7 +18,7 @@ export default () => (
       <Header pad='medium'
         justify='between'>
         <Title pad='small'>
-        <img src="http://notman.org/wp-content/uploads/2017/07/NOTMAN_logo.png" alt="Maison Norman House" width='180em'/> 
+        <img src="http://acmelogos.com/images/logo-1.svg" alt="logo" width='120em'/> 
         </Title>
       </Header>
       <Box flex='grow'
