@@ -1,7 +1,7 @@
 import axios from 'axios';
 import appid from '../config';
 //http://api.openweathermap.org/data/2.5/weather?lat=43&lon=-75&units=metric&
-const url = 'http://api.openweathermap.org/data/2.5';
+const url = 'https://api.openweathermap.org/data/2.5';
 
 // http://api.openweathermap.org/data/2.5/weather?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY
 
